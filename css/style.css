@@ -1,0 +1,146 @@
+body{
+	margin:0px;
+	height:100%;
+	background-color:#9ccc65;
+
+}
+.page{
+		height:100%;
+}
+
+.heaven-page-content {
+	 padding-top: 0 !important;
+	 height: 100%;
+}
+ .heaven-page-content .sky-rectangle {
+	 min-width: 1200px;
+	 height: 45%;
+	 background-color: #81d4fa;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-around;
+}
+ .heaven-page-content .sky-rectangle .birds img {
+	 max-width: 150px;
+	 animation-name: bird-move;
+	 animation-duration: 40s;
+	 animation-iteration-count: infinite;
+}
+ @keyframes bird-move {
+	 0% {
+                transform: translatex(0);
+            }
+
+            50% {
+                transform: translatex(-150px);
+            }
+
+            100% {
+                transform: translatex(0);
+            }
+}
+ .heaven-page-content .sky-rectangle .cloud {
+	 position: relative;
+	 display: block;
+	 width: 2em;
+	 height: 2em;
+	 color: white;
+	 background: white;
+	 border-width: 0.25em;
+	 border-style: solid;
+	 border-radius: 50% 50% 0 0;
+}
+ .heaven-page-content .sky-rectangle .cloud:before, .heaven-page-content .sky-rectangle .cloud:after {
+	 content: '';
+	 position: absolute;
+	 bottom: -0.25em;
+	 background: inherit;
+	 border-width: 0.25em;
+	 border-style: solid;
+}
+ .heaven-page-content .sky-rectangle .cloud:before {
+	 left: 80%;
+	 width: 60%;
+	 height: 60%;
+	 border-left: none;
+	 border-radius: 50% 50% 50% 0;
+}
+ .heaven-page-content .sky-rectangle .cloud:after {
+	 right: 80%;
+	 width: 80%;
+	 height: 80%;
+	 border-right: none;
+	 border-radius: 50% 50% 0;
+}
+ .heaven-page-content .sky-rectangle .cloud-before {
+	 animation-name: cloud-move;
+	 animation-duration: 30s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: linear;
+}
+@keyframes cloud-move {
+
+            0% {
+                transform: translatex(0);
+            }
+
+            100% {
+                transform: translatex(100px);
+            }
+        }
+ .heaven-page-content .sky-rectangle .cloud-after {
+	 animation-name: back-cloud-move;
+	 animation-duration: 30s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: linear;
+}
+  @keyframes back-cloud-move {
+
+            0% {
+                transform: translatex(0);
+            }
+
+            100% {
+                transform: translatex(-100px);
+            }
+        }
+ .heaven-page-content .herb-rectangle {
+	 width: 1200px;
+	 background-color: #9ccc65;
+}
+ .heaven-page-content .herb-rectangle .yabisa {
+	 position: relative;
+}
+ .heaven-page-content .herb-rectangle .yabisa .river {
+	 position: absolute;
+	 top: -10px;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+}
+ .heaven-page-content .herb-rectangle .yabisa .river .water {
+	 position: relative;
+	 max-width: 4rem;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-palm {
+	 display: none;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-palm.active {
+	 display: block;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-castle {
+	 display: none;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-castle.active {
+	 display: block;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-treasure {
+	 display: none;
+}
+ .heaven-page-content .herb-rectangle .yabisa .img-treasure.active {
+	 display: block;
+}
+ .heaven-page-content .herb-rectangle .wave svg {
+	 background-color: #9ccc65;
+}
+ 
