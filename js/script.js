@@ -1,4 +1,8 @@
 
+ window.addEventListener("load", function() {
+    document.getElementById("loading-popup").style.display = "none";
+  });
+  
 $(document).ready(function() {
 	
 var riverSound = new Audio("audio/river.wav");
