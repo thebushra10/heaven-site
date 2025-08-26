@@ -5,22 +5,7 @@ body{
 
 }
 
-#loading-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #333;
-  z-index: 9999;
-}
-
-#loading-popup, #rotate-popup {
+#loading-popup, #rotate-popup, #click-popup {
   position: fixed;       /* ثابت على الشاشة */
   top: 0;                /* أعلى الشاشة */
   left: 0;               /* من اليسار */
@@ -36,6 +21,10 @@ body{
   z-index: 9999;        /* فوق كل العناصر */
   border-radius: 0 0 10px 0;  /* شكل أنيق للزاوية */
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#click-popup {
+  top: 6rem !important;                /* أعلى الشاشة */
 }
 
 .popup-content {

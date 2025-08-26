@@ -1,16 +1,21 @@
 
  window.addEventListener("load", function() {
     document.getElementById("loading-popup").style.display = "none";
-	
+			
+	setTimeout(function() {
+		const rotatePopup = document.getElementById("rotate-popup");
+		const clickPopup = document.getElementById("click-popup");
 
-setTimeout(function() {
-	const rotatePopup = document.getElementById("rotate-popup");
-	rotatePopup.style.display = "flex";
+		rotatePopup.style.display = "flex";
+		clickPopup.style.display = "flex";
+
 	
 	  // إخفاء popup بعد 5 ثواني
-	setTimeout(function() {
-		rotatePopup.style.display = "none";
-	}, 3000); // 5000 ميلي ثانية = 5 ثواني
+		setTimeout(function() {
+			rotatePopup.style.display = "none";
+			clickPopup.style.display = "none";
+
+		}, 3000); // 5000 ميلي ثانية = 5 ثواني
 	}, 2000);
 
   });
@@ -25,6 +30,13 @@ var  birdsSound = new Audio("audio/bird.wav");
 	riverSound.play();
 	birdsSound.play();
 }, { once: true });
+
+window.addEventListener("beforeunload", function() {
+  riverSound.pause();      // إيقاف الصوت
+  riverSound.currentTime = 0; // إعادة الصوت للبداية
+  birdsSound.pause();      // إيقاف الصوت
+  birdsSound.currentTime = 0; // إعادة الصوت للبداية
+});
   
 const params = new URLSearchParams(window.location.search);
 var tasbih = params.get("tasbih");
