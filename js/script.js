@@ -1,21 +1,30 @@
 
  window.addEventListener("load", function() {
     document.getElementById("loading-popup").style.display = "none";
+	
+
+setTimeout(function() {
+	const rotatePopup = document.getElementById("rotate-popup");
+	rotatePopup.style.display = "flex";
+	
+	  // إخفاء popup بعد 5 ثواني
+	setTimeout(function() {
+		rotatePopup.style.display = "none";
+	}, 3000); // 5000 ميلي ثانية = 5 ثواني
+	}, 2000);
+
   });
   
-$(document).ready(function() {
-	
+$(document).ready(function() {	
 var riverSound = new Audio("audio/river.wav");
 riverSound.volume = 0.1;
 
 var  birdsSound = new Audio("audio/bird.wav");
 
  document.addEventListener("click", () => {
-riverSound.play();
-birdsSound.play();
-
-
-  }, { once: true });
+	riverSound.play();
+	birdsSound.play();
+}, { once: true });
   
 const params = new URLSearchParams(window.location.search);
 var tasbih = params.get("tasbih");

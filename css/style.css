@@ -20,11 +20,29 @@ body{
   z-index: 9999;
 }
 
+#loading-popup, #rotate-popup {
+  position: fixed;       /* ثابت على الشاشة */
+  top: 0;                /* أعلى الشاشة */
+  left: 0;               /* من اليسار */
+  width: auto;           /* عرض حسب المحتوى */
+  height: auto;          /* ارتفاع حسب المحتوى */
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: flex-start;  /* المحتوى يبدأ من اليسار */
+  align-items: flex-start;      /* المحتوى أعلى */
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  z-index: 9999;        /* فوق كل العناصر */
+  border-radius: 0 0 10px 0;  /* شكل أنيق للزاوية */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
 .popup-content {
   background: #fff;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  max-width: 15rem;      /* مناسب للشاشات الصغيرة */
 }
 
 
